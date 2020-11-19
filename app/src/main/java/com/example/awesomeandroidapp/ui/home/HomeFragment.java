@@ -1,6 +1,9 @@
 package com.example.awesomeandroidapp.ui.home;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,12 +21,15 @@ import com.example.awesomeandroidapp.R;
 import com.sch.share.WXShareMultiImageHelper;
 import com.example.awesomeandroidapp.adapter.GridViewAdapter;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.logging.Logger;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
+    private static final String TAG = HomeFragment.class.getSimpleName();
     private int[] imgList = {
         R.mipmap.img_1,
         R.mipmap.img_2,
@@ -73,7 +79,38 @@ public class HomeFragment extends Fragment {
 
     /** Called when the user taps the button */
     private void shareToFriend() {
-//        WXShareMultiImageHelper.shareToSession(, imgList);
-        System.out.println("分享到朋友圈");
+//        WXShareMultiImageHelper.shareToSession((getActivity(), );
+        Log.d(TAG, "分享给好友！");
+    }
+
+    private void share() {
+        new Thread(new Task("Thread-1")).start();
+    }
+
+    private class Task implements Runnable {
+        private String threadName;
+
+        Task(String name) {
+            threadName = name;
+            Log.d(TAG, "线程名称" + threadName);
+        }
+
+        @Override
+        public void run() {
+            try {
+                Log.d(TAG, "多线程处理运行开始");
+                ArrayList<Bitmap> bitmapList = new ArrayList<Bitmap>();
+
+                for (int item : imgList) {
+                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), item);
+                    bitmapList.add(bitmap);
+                }
+
+//                WXShareMultiImageHelper.shareToSession(getActivity(), bitmapList);
+                Log.d(TAG, "多线程处理运行结束");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
