@@ -1,6 +1,5 @@
 package com.example.awesomeandroidapp.ui.home;
 
-import android.Manifest;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -60,17 +59,17 @@ public class HomeFragment extends Fragment {
             Toast toast = Toast.makeText(getContext(), "这是匿名内部类作为事件监听器类", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
-            rxPermissions
-                    .request(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    .subscribe(granted -> {
-                        if (granted) {
-                            shareToFriend((List<Bitmap> bitmapList) -> {
-                                Log.d(TAG, "分享数据" + bitmapList);
-                            });
-                        } else {
-                            Log.d(TAG, "未开启文件写入权限！");
-                        }
-                    });
+//            rxPermissions
+//                .request(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//                .subscribe(granted -> {
+//                    if (granted) {
+//                        shareToFriend((List<Bitmap> bitmapList) -> {
+//                            Log.d(TAG, "分享数据" + bitmapList);
+//                        });
+//                    } else {
+//                        Log.d(TAG, "未开启文件写入权限！");
+//                    }
+//                });
         }
     }
 
