@@ -1,4 +1,4 @@
-package com.example.awesomeandroidapp.ui.home;
+package com.chacha.awesomeandroidapp.ui.home;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,11 +15,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.Observer;
 
-import com.example.awesomeandroidapp.R;
+import com.chacha.awesomeandroidapp.R;
 import com.sch.share.WXShareMultiImageHelper;
-import com.example.awesomeandroidapp.adapter.GridViewAdapter;
+import com.chacha.awesomeandroidapp.adapter.GridViewAdapter;
 import com.tbruyelle.rxpermissions3.RxPermissions;
 
 import java.util.ArrayList;

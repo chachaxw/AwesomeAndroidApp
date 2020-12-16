@@ -1,7 +1,8 @@
-package com.example.awesomeandroidapp;
+package com.chacha.awesomeandroidapp;
 
 import android.os.Bundle;
 
+import com.chacha.awesomeandroidapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;

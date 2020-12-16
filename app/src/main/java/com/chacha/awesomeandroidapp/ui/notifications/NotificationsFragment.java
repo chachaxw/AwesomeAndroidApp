@@ -1,4 +1,4 @@
-package com.example.awesomeandroidapp.ui.notifications;
+package com.chacha.awesomeandroidapp.ui.notifications;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,10 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.awesomeandroidapp.R;
-import com.example.awesomeandroidapp.ui.dashboard.DashboardViewModel;
 
 public class NotificationsFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package com.example.awesomeandroidapp.ui.dashboard;
+package com.chacha.awesomeandroidapp.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

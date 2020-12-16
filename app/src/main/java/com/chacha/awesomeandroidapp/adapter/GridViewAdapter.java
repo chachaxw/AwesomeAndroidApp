@@ -1,4 +1,4 @@
-package com.example.awesomeandroidapp.adapter;
+package com.chacha.awesomeandroidapp.adapter;
 
 import android.content.Context;
 import android.view.View;
