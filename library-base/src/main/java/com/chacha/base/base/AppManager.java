@@ -5,7 +5,7 @@ import android.app.Activity;
 import java.util.Stack;
 
 /**
- * 应用模块:
+ * 应用模块: base
  * <p>
  *     Activity堆栈管理
  * </p>

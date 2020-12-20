@@ -18,6 +18,11 @@ import androidx.annotation.Nullable;
  * @package_name com.chacha.base.base
  * @date 12/16/20
  * @time 5:30 PM
+ *
+ * 应用模块: base
+ * <p>
+ *     BaseApplication类
+ * </p>
  */
 public class BaseApplication extends Application {
 
@@ -89,7 +94,7 @@ public class BaseApplication extends Application {
 
     /**
      * 是否开启debug模式
-     * @param debug
+     * @param debug 是否debug
      */
     public void setDebug(boolean debug) {
         isDebug = debug;
@@ -103,7 +108,7 @@ public class BaseApplication extends Application {
      * 获取进程名
      *
      * @param context
-     * @return
+     * @return 返回进程名称
      */
     public static String getCurrentProcessName(Context context) {
         ActivityManager activityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
