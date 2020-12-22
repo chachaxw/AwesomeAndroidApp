@@ -1,5 +1,7 @@
 package com.chacha.base.model;
 
+import java.lang.ref.WeakReference;
+
 /**
  * @author chacha
  * @project AwesomeAndroidApp
@@ -22,7 +24,41 @@ public abstract class BaseModel<T> extends SuperBaseModel<T> {
          * 3. synchronized 还可以保证一个线程的变化（主要是共享数据的变化）被其他线程所看到
          */
         synchronized (this) {
+            uiHandler.postDelayed(() -> {
+                for (WeakReference<IBaseModelListener> weakListener : weakReferenceDeque) {
+                    if (weakListener.get() instanceof IModelListener) {
+                        IModelListener<T> item = (IModelListener<T>)weakListener.get();
 
+                        if (item != null) {
+                            item.onLoadFinish(BaseModel.this, data);
+                        }
+                    }
+                }
+            }, 0);
         }
+    }
+
+    /**
+     * 加载数据失败，通知所有注册者
+     */
+    protected void loadFail(String prompt) {
+        synchronized (this) {
+            uiHandler.postDelayed(() -> {
+                for (WeakReference<IBaseModelListener> weakListener: weakReferenceDeque) {
+                    if (weakListener.get() instanceof IModelListener) {
+                        IModelListener<T> item = (IModelListener<T>)weakListener.get();
+
+                        if (item != null) {
+                            item.onLoadFail(BaseModel.this, prompt);
+                        }
+                    }
+                }
+            }, 0);
+        }
+    }
+
+    @Override
+    protected void notifyCacheData(T data) {
+        loadSuccess(data);
     }
 }
