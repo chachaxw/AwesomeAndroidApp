@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="base_empty_text">此处空空如也!</string>
+    <string name="oh_no">Oh no!</string>
+    <string name="error_description">出现了一些错误，请重试！</string>
+    <string name="error_button_text">重试</string>
+    <string name="network_error">没有网络连接</string>
+    <string name="network_error_description">您的网络连接中断，请打开网络连接重试</string>
+</resources>
