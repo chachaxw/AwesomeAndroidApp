@@ -73,4 +73,7 @@ mmkv 是腾讯开源的一个轻量级的存储库，用来代替SharedPreferenc
 
 - gsyVideoPlayer
 一个第三方视频播放库，基于bilibili 开源的 ijkplayer，可自定义性也还不错，
-主要使用这个库实现类似微博等视频列表根据滚动判断自动播放，
+主要使用这个库实现类似微博等视频列表根据滚动判断自动播放
+
+## 学习更多🔭
+[Gradle Implementation vs API configuration](https://stackoverflow.com/questions/44413952/gradle-implementation-vs-api-configuration)

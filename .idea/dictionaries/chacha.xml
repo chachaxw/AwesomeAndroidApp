@@ -2,6 +2,7 @@
   <dictionary name="chacha">
     <words>
       <w>chacha</w>
+      <w>gson</w>
       <w>jetpack</w>
       <w>mvvm</w>
       <w>viewmodel</w>
