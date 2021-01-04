@@ -19,6 +19,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -27,5 +36,7 @@ dependencies {
     testImplementation rootProject.ext.androidx["junit"]
     androidTestImplementation rootProject.ext.androidx["androidx.test.ext-junit"]
     androidTestImplementation rootProject.ext.androidx["androidx.test.espresso:espresso-core"]
-    implementation rootProject.ext.dependencies["rxjava3"]
+    api rootProject.ext.dependencies["rxjava3"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["carbon"]
 }

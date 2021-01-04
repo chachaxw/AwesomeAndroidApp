@@ -29,6 +29,9 @@ import io.reactivex.rxjava3.disposables.Disposable;
 public abstract class SuperBaseModel<T> {
     protected CompositeDisposable compositeDisposable;
 
+    /**
+     * Android Handler机制(https://segmentfault.com/a/1190000022843928)
+     */
     protected Handler uiHandler = new Handler(Looper.getMainLooper());
 
     /**
@@ -132,6 +135,7 @@ public abstract class SuperBaseModel<T> {
     /**
      * 获取缓存数据并加载网络数据
      */
+    @SuppressWarnings("unchecked")
     public void getCacheDataAndLoad() {
         // 如果有apk内置数据,加载内置数据
         if (getApkCache() != null) {

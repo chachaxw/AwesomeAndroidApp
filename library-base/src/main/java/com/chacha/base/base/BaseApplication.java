@@ -107,7 +107,7 @@ public class BaseApplication extends Application {
     /**
      * 获取进程名
      *
-     * @param context
+     * @param context 上下文
      * @return 返回进程名称
      */
     public static String getCurrentProcessName(Context context) {

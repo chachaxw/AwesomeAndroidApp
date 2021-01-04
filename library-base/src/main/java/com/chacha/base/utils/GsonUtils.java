@@ -15,7 +15,7 @@ import java.lang.reflect.Type;
  *
  * 应用模块: utils
  * <p>
- *      类描述: json解析工具类
+ *      json解析工具类
  * <p>
  */
 public class GsonUtils {

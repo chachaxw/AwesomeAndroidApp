@@ -7,7 +7,7 @@ package com.chacha.base.model;
  * @date 12/22/20
  * @time 2:03 PM
  */
-public interface IPagingModelListener<T>  extends IBaseModelListener {
+public interface IPagingModelListener<T> extends IBaseModelListener {
     /**
      * 数据加载完成
      *

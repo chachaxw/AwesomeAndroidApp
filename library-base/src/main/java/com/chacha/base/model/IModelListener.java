@@ -17,16 +17,16 @@ public interface IModelListener<T> extends IBaseModelListener {
     /**
      * 数据加载完成
      *
-     * @param model
-     * @param data
+     * @param model 数据模型
+     * @param data 数据
      */
-    void onLoadFinish(BaseModel model, T data);
+    void onLoadFinish(BaseModel<T> model, T data);
 
     /**
      * 数据加载失败
      *
-     * @param model
-     * @param prompt
+     * @param model  数据模型
+     * @param prompt  数据
      */
-    void onLoadFail(BaseModel model, String prompt);
+    void onLoadFail(BaseModel<T> model, String prompt);
 }
