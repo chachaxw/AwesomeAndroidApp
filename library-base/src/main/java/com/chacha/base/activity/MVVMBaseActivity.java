@@ -40,7 +40,7 @@ public abstract class MVVMBaseActivity<V extends ViewDataBinding, VM extends IMV
 
     // Raw use of parameterized class 'LoadService'
     // https://stackoverflow.com/questions/24672749/raw-use-of-parameterized-class
-    protected LoadService mLoadService;
+    protected LoadService loadService;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,31 +60,31 @@ public abstract class MVVMBaseActivity<V extends ViewDataBinding, VM extends IMV
 
     @Override
     public void showContent() {
-        if (mLoadService != null) {
+        if (loadService != null) {
             isShowedContent = true;
-            mLoadService.showSuccess();
+            loadService.showSuccess();
         }
     }
 
     @Override
     public void showLoading() {
-        if (mLoadService != null) {
-            mLoadService.showCallback(LoadingCallback.class);
+        if (loadService != null) {
+            loadService.showCallback(LoadingCallback.class);
         }
     }
 
     @Override
     public void showEmpty() {
-        if (mLoadService != null) {
-            mLoadService.showCallback(EmptyCallback.class);
+        if (loadService != null) {
+            loadService.showCallback(EmptyCallback.class);
         }
     }
 
     @Override
     public void showError(String message) {
-        if (mLoadService != null) {
+        if (loadService != null) {
             if (!isShowedContent) {
-                mLoadService.showCallback(ErrorCallback.class);
+                loadService.showCallback(ErrorCallback.class);
             } else {
                 ToastUtils.show(this, message);
             }
@@ -119,8 +119,8 @@ public abstract class MVVMBaseActivity<V extends ViewDataBinding, VM extends IMV
      * @param view 界面View
      */
     public void setLoadSir(View view) {
-        if (mLoadService == null) {
-            mLoadService = LoadSir.getDefault().register(view, (Callback.OnReloadListener)v -> onRetryButtonClick());
+        if (loadService == null) {
+            loadService = LoadSir.getDefault().register(view, (Callback.OnReloadListener)v -> onRetryButtonClick());
         }
     }
 
