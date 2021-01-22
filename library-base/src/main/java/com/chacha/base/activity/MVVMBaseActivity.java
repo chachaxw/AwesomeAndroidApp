@@ -25,9 +25,10 @@ import androidx.databinding.ViewDataBinding;
  * @date 1/16/21
  * @time 11:21 PM
  *
- * 应用模块: activity
+ * 应用模块: Activity
  * <p>
- *     activity抽象基类
+ *     Activity抽象基类
+ *     <a href="https://developer.android.com/guide/components/activities/activity-lifecycle">了解 Activity 生命周期</a>
  * </p>
  */
 public abstract class MVVMBaseActivity<V extends ViewDataBinding, VM extends IMVVMBaseViewModel> extends AppCompatActivity implements IBaseView {
