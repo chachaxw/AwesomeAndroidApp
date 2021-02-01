@@ -2,7 +2,7 @@
 apply from: "config.gradle"
 apply plugin: 'com.alibaba.arouter'
 buildscript {
-    ext.kotlin_version = '1.4.20'
+    ext.kotlin_version = '1.4.21'
     repositories {
         maven {
             url 'https://maven.aliyun.com/repository/google'
@@ -26,7 +26,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.android.tools.build:gradle:4.1.2'
         classpath "com.alibaba:arouter-register:1.0.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 

@@ -5,17 +5,17 @@
 
 - 项目结构图
 
-![architecture](app/src/main/res/mipmap-xhdpi/Screen Shot 2020-12-14 at 11.26.30 AM.png)
+![architecture](assets/images/Screen Shot 2020-12-14 at 11.26.30 AM.png)
 
 - App 架构图
 
-![architecture](app/src/main/res/mipmap-xhdpi/architecture.png)
+![architecture](assets/images/architecture.png)
 
 ## App 使用技术介绍
 
 - MVVM 架构设计
 
-![Android MVVM架构](app/src/main/res/mipmap-xhdpi/final-architecture.png)
+![Android MVVM架构](assets/images/final-architecture.png)
 
 [Android Jetpack 应用架构设计指南](hhttps://developer.android.com/jetpack/guide)
 
@@ -28,7 +28,7 @@
 
 Jetpack概览
 
-![Jetpack Overview](app/src/main/res/mipmap-xhdpi/android-jetpack.jpg)
+![Jetpack Overview](assets/images/android-jetpack.jpg)
 
 ## app 第三方的依赖
 
