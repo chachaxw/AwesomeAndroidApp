@@ -7,8 +7,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 public class GridViewAdapter extends BaseAdapter {
-    private int[] list;
-    private Context context;
+    private final int[] list;
+    private final Context context;
 
     public GridViewAdapter(Context context, int[] gridList) {
         this.context = context;
@@ -35,7 +35,7 @@ public class GridViewAdapter extends BaseAdapter {
         ImageView imageView = new ImageView(context);
         imageView.setImageResource(list[i]);
         imageView.setAdjustViewBounds(true);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         return imageView;
     }
 }

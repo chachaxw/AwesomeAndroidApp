@@ -32,17 +32,19 @@ Jetpack概览
 
 ## app 第三方的依赖
 
-- RxEasyHttp
- RxEasyHttp是一款github上开源的RxJava2+Retrofit2实现简单易用的网络请求框架，在本人发现并观摩其源码和设计原理后，发现着实写的不错，各种业务场景基本都设计到了，api 设计的也不错，当然也存在一些瑕疵，所以实际项目中还需根据自己的业务需求进行二次开发，推荐给各位看官[RxEasyHttp](https://github.com/darryrzhong/RxEasyHttp)
+- [RxEasyHttp](https://github.com/darryrzhong/RxEasyHttp)
+
+ RxEasyHttp是一款github上开源的RxJava2+Retrofit2实现简单易用的网络请求框架，在本人发现并观摩其源码和设计原理后，发现着实写的不错，
+ 各种业务场景基本都设计到了，api 设计的也不错，当然也存在一些瑕疵，所以实际项目中还需根据自己的业务需求进行二次开发.
 
 - [Loadsir](https://github.com/KingJA/LoadSir)
 loadsir是一个app 页面状态管理的第三方库，也非常得实用，用来控制app 内的加载页面 、加载错误页面、空页面显示，
 点击重试等，从此告别自己控制网络加载失败等页面 show 、 hint 操作 和ViewStub等的控制，
 可以基于自己的业务进行基类封装，具体请看项目base库中activity 和fragment 基类的封装。
 
-- mmkv 
+- [MMKV](https://github.com/Tencent/MMKV) 
 
-mmkv 是腾讯开源的一个轻量级的存储库，用来代替SharedPreferences 再好不过了，具体使用请看官方介绍
+MMKV 是腾讯开源的一个轻量级的存储库，是基于 mmap 内存映射的 key-value 组件，底层序列化/反序列化使用 protobuf 实现 具体使用请看官方介绍
 
 - BaseRecyclerViewAdapterHelper
 
@@ -52,37 +54,32 @@ mmkv 是腾讯开源的一个轻量级的存储库，用来代替SharedPreferenc
 
 这个库和上面那个库一样，用的非常多，
 
-- immersionbar
+- [ImmersionBar](https://github.com/gyf-dev/ImmersionBar)
 
-实现沉浸式状态栏的一个第三方库，也是非常常用
+android 4.4以上沉浸式状态栏和沉浸式导航栏管理，适配横竖屏切换、刘海屏、软键盘弹出等问题，可以修改状态栏字体颜色和导航栏图标颜色，
+以及不可修改字体颜色手机的适配，适用于Activity、Fragment、DialogFragment、Dialog，PopupWindow
 
-- glide
+- [glide](https://github.com/bumptech/glide)
 
-图片加载库
+Glide是一个快速高效的Android图片加载库，注重于平滑的滚动。Glide提供了易用的API，高性能、可扩展的图片解码管道（decode pipeline），以及自动的资源池技术
 
-- rxpermissions 
+- [RxPermissions](https://github.com/tbruyelle/RxPermissions)
 
-权限加载库
+基于RxJava的权限加载库
 
-- logger
+- [logger](https://github.com/orhanobut/logger)
 
-日志打印库，打出来的日志格式看得比较舒服
+安卓简单强大的日志打印工具
 
-- utilcodex
+- [BannerViewPager](https://github.com/zhpanvip/BannerViewPager)
 
-一个android 工具库，里面有非常多的工具类，当然实际项目用不到这么多，所以可以根据需求copy代码就好，不用集成
+ViewPager轮播图，简单、高效，一行代码实现循环轮播，一屏三页任意变，指示器样式任你挑
 
-- BannerViewPager
+- [GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)
 
-一个第三方轮播图的库，这个库比较新，所以start数比较少，但是挺好用，推荐
-
-- PagerBottomTabStrip
-
-一个第三方导航库，app中的底部导航就是基于这个库，挺好用，自带小红点管理
-
-- gsyVideoPlayer
-一个第三方视频播放库，基于bilibili 开源的 ijkplayer，可自定义性也还不错，
-主要使用这个库实现类似微博等视频列表根据滚动判断自动播放
+视频播放器（IJKplayer、ExoPlayer、MediaPlayer），HTTPS，支持弹幕，外挂字幕，支持滤镜、水印、gif截图，片头广告、中间广告，多个同时播放，
+支持基本的拖动，声音、亮度调节，支持边播边缓存，支持视频自带rotation的旋转（90,270之类），重力旋转与手动旋转的同步支持，支持列表播放，
+列表全屏动画，视频加载速度，列表小窗口支持拖动，动画效果，调整比例，多分辨率切换，支持切换播放器，进度条小窗口预览，列表切换详情页面无缝播放，rtsp、concat、mpeg。
 
 ## 学习更多🔭
 [Gradle Implementation vs API configuration](https://stackoverflow.com/questions/44413952/gradle-implementation-vs-api-configuration)

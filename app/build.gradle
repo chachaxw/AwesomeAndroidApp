@@ -41,7 +41,6 @@ dependencies {
     implementation rootProject.ext.androidx["androidx.navigation-ui"]
     implementation rootProject.ext.androidx["androidx.lifecycle"]
     implementation rootProject.ext.dependencies["rxpermissions"]
-    implementation rootProject.ext.dependencies["wx-share"]
     testImplementation rootProject.ext.androidx["junit"]
     androidTestImplementation rootProject.ext.androidx["androidx.test.ext-junit"]
     androidTestImplementation rootProject.ext.androidx["androidx.test.espresso:espresso-core"]
