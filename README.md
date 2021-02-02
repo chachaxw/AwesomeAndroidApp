@@ -82,4 +82,7 @@ ViewPager轮播图，简单、高效，一行代码实现循环轮播，一屏�
 列表全屏动画，视频加载速度，列表小窗口支持拖动，动画效果，调整比例，多分辨率切换，支持切换播放器，进度条小窗口预览，列表切换详情页面无缝播放，rtsp、concat、mpeg。
 
 ## 学习更多🔭
+
 [Gradle Implementation vs API configuration](https://stackoverflow.com/questions/44413952/gradle-implementation-vs-api-configuration)
+[Java基础 ：反射、注解、代理、线程池、依赖的学习和理解](https://www.jianshu.com/p/8da24b7cf443)
+[Android Handler机制](https://segmentfault.com/a/1190000022843928)
