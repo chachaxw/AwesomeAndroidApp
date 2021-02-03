@@ -86,3 +86,4 @@ ViewPager轮播图，简单、高效，一行代码实现循环轮播，一屏�
 [Gradle Implementation vs API configuration](https://stackoverflow.com/questions/44413952/gradle-implementation-vs-api-configuration)
 [Java基础 ：反射、注解、代理、线程池、依赖的学习和理解](https://www.jianshu.com/p/8da24b7cf443)
 [Android Handler机制](https://segmentfault.com/a/1190000022843928)
+[Android Jetpack框架之LiveData与ViewModel](https://www.jianshu.com/p/349642a79e89)
