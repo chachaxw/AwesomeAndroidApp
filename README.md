@@ -50,9 +50,9 @@ MMKV 是腾讯开源的一个轻量级的存储库，是基于 mmap 内存映射
 
 相信对于这个库大家应该是非常熟悉了吧，基本做android 开发的都用过吧，不多说了
 
-- SmartRefreshLayout
+- [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)
 
-这个库和上面那个库一样，用的非常多，
+🔥下拉刷新、上拉加载、二级刷新、淘宝二楼、RefreshLayout、OverScroll，Android智能下拉刷新框架，支持越界回弹、越界拖动，具有极强的扩展性，集成了几十种炫酷的Header和 Footer。
 
 - [ImmersionBar](https://github.com/gyf-dev/ImmersionBar)
 
@@ -70,6 +70,10 @@ Glide是一个快速高效的Android图片加载库，注重于平滑的滚动�
 - [logger](https://github.com/orhanobut/logger)
 
 安卓简单强大的日志打印工具
+
+- [Android Util Code](https://github.com/Blankj/AndroidUtilCode)
+
+常用安卓工具代码，[Android开发人员不得不收集的代码(持续更新中)](https://blankj.com/2016/07/31/android-utils-code/)
 
 - [BannerViewPager](https://github.com/zhpanvip/BannerViewPager)
 

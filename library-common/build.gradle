@@ -3,13 +3,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -25,13 +26,23 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    resourcePrefix "common_"
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
-
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.1.0'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    api project(":library-base")
+    api rootProject.ext.dependencies["arouter-api"]
+    api rootProject.ext.dependencies["utilcodex"]
+    // smart refresh
+    api 'com.scwang.smart:refresh-layout-kernel:2.0.0'
+    api 'com.scwang.smart:refresh-header-classics:2.0.0'
+    api 'com.scwang.smart:refresh-footer-classics:2.0.0'
+    // banner
+    api 'com.github.zhpanvip:BannerViewPager:3.5.0'
+    api 'com.github.zhpanvip:viewpagerindicator:1.2.0'
 }
