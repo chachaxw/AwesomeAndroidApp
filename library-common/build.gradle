@@ -38,6 +38,9 @@ dependencies {
     api project(":library-base")
     api rootProject.ext.dependencies["arouter-api"]
     api rootProject.ext.dependencies["utilcodex"]
+    testImplementation rootProject.ext.androidx["junit"]
+    androidTestImplementation rootProject.ext.androidx["androidx.test.ext-junit"]
+    androidTestImplementation rootProject.ext.androidx["androidx.test.espresso:espresso-core"]
     // smart refresh
     api 'com.scwang.smart:refresh-layout-kernel:2.0.0'
     api 'com.scwang.smart:refresh-header-classics:2.0.0'
