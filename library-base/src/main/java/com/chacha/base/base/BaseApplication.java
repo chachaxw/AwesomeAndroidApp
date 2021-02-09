@@ -37,7 +37,7 @@ public class BaseApplication extends Application {
     }
 
     /**
-     * 当宿主没有继承自该 Application 时,可以使用set方法进行初始化 BaseApplication
+     * 当宿主没有继承自该 Application 时，可以使用set方法进行初始化 BaseApplication
      * @param application BaseApplication类实例
      */
     private void setApplication(@NonNull BaseApplication application) {
