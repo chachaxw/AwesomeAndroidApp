@@ -28,9 +28,9 @@
 
 Jetpack概览
 
-![Jetpack Overview](assets/images/android-jetpack.jpg)
+![Jetpack Overview](assets/images/Android Jetpack.png)
 
-## app 第三方的依赖
+## App 第三方的依赖
 
 - [RxEasyHttp](https://github.com/darryrzhong/RxEasyHttp)
 
@@ -85,9 +85,14 @@ ViewPager轮播图，简单、高效，一行代码实现循环轮播，一屏�
 支持基本的拖动，声音、亮度调节，支持边播边缓存，支持视频自带rotation的旋转（90,270之类），重力旋转与手动旋转的同步支持，支持列表播放，
 列表全屏动画，视频加载速度，列表小窗口支持拖动，动画效果，调整比例，多分辨率切换，支持切换播放器，进度条小窗口预览，列表切换详情页面无缝播放，rtsp、concat、mpeg。
 
+- [Robolectric](https://github.com/robolectric/robolectric)
+
+安卓单元测试框架
+
 ## 学习更多🔭
 
 [Gradle Implementation vs API configuration](https://stackoverflow.com/questions/44413952/gradle-implementation-vs-api-configuration)
 [Java基础 ：反射、注解、代理、线程池、依赖的学习和理解](https://www.jianshu.com/p/8da24b7cf443)
 [Android Handler机制](https://segmentfault.com/a/1190000022843928)
 [Android Jetpack框架之LiveData与ViewModel](https://www.jianshu.com/p/349642a79e89)
+[Android单元测试研究与实践](https://tech.meituan.com/2015/12/24/android-unit-test.html)
