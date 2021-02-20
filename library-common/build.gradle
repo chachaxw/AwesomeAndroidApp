@@ -39,6 +39,7 @@ dependencies {
     api rootProject.ext.dependencies["arouter-api"]
     api rootProject.ext.dependencies["utilcodex"]
     api rootProject.ext.dependencies["logger"]
+    implementation rootProject.ext.androidx["androidx.recycleview"]
     testImplementation rootProject.ext.androidx["junit"]
     androidTestImplementation rootProject.ext.androidx["androidx.test.ext-junit"]
     androidTestImplementation rootProject.ext.androidx["androidx.test.espresso:espresso-core"]

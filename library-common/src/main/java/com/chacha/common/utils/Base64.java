@@ -11,7 +11,8 @@ import java.nio.charset.StandardCharsets;
  * @time 2:30 PM
  *
  * <p>
- *     Base64转换工具，Base64原理(http://www.ruanyifeng.com/blog/2008/06/base64.html)
+ *     Base64转换工具
+ *     @see <a href="http://www.ruanyifeng.com/blog/2008/06/base64.html">Base64原理</a>
  * </p>
  */
 public class Base64 {

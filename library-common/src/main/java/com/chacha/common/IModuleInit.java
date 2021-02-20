@@ -14,8 +14,12 @@ import com.chacha.base.base.BaseApplication;
  * </p>
  */
 public interface IModuleInit {
-    // 需要优先初始化的
-    boolean onInitAhead(BaseApplication application);
+    /**
+     * 需要优先初始化的
+     *
+     * @param application BaseApplication
+     */
+    void onInitAhead(BaseApplication application);
 
     // 可以后初始化的
     boolean onInitBehind(BaseApplication application);

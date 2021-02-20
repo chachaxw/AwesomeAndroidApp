@@ -23,7 +23,7 @@ import androidx.annotation.Nullable;
 public class CommonModuleInit implements IModuleInit {
 
     @Override
-    public boolean onInitAhead(BaseApplication application) {
+    public void onInitAhead(BaseApplication application) {
         // 初始化日志库
         Logger.addLogAdapter(new AndroidLogAdapter() {
             @Override
@@ -41,8 +41,6 @@ public class CommonModuleInit implements IModuleInit {
         ARouter.init(application);
         MMKV.initialize(application);
         Logger.i("基础层初始化完毕 -- onInitAhead");
-
-        return false;
     }
 
     @Override
