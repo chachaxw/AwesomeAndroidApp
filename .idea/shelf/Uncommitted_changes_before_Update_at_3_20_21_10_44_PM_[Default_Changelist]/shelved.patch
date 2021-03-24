@@ -1,0 +1,169 @@
+Index: library-common/src/main/java/com/chacha/common/router/RouterActivityPath.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- library-common/src/main/java/com/chacha/common/router/RouterActivityPath.java	(date 1613637346000)
++++ library-common/src/main/java/com/chacha/common/router/RouterActivityPath.java	(date 1613637346000)
+@@ -0,0 +1,42 @@
++package com.chacha.common.router;
++
++/**
++ * @author chacha
++ * @project AwesomeAndroidApp
++ * @package_name com.chacha.common.router
++ * @date 2/18/21
++ * @time 4:32 PM
++ *
++ * <p>
++ *     组件化Activity路径配置，利用ARouter进行Activity跳转的统一路径注册
++ * </p>
++ *
++ */
++public class RouterActivityPath {
++    // Main组件
++    public static class Main {
++        private static final String MAIN = "/main";
++
++        // 主页面
++        public static final String PAGER_MAIN = MAIN + "/Main";
++    }
++
++    // 视频播放(video)组件
++    public static class Video {
++        private static final String VIDEO = "/video";
++
++        // 视频播放界面
++        public static final String PAGER_VIDEO = VIDEO + "/Video";
++    }
++
++    // User组件
++    public static class User {
++        private static final String USER = "/user";
++
++        // 登录界面
++        public static final String PAGER_LOGIN = USER + "/Login";
++
++        // 关注页面
++        public static final String PAGER_ATTENTION = USER + "/attention";
++    }
++}
+Index: library-video/src/test/java/com/chacha/video/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- library-video/src/test/java/com/chacha/video/ExampleUnitTest.java	(date 1615461452000)
++++ library-video/src/test/java/com/chacha/video/ExampleUnitTest.java	(date 1615461452000)
+@@ -0,0 +1,17 @@
++package com.chacha.video;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * Example local unit test, which will execute on the development machine (host).
++ *
++ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
+Index: library-common/src/main/java/com/chacha/common/interceptor/LoginInterceptor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- library-common/src/main/java/com/chacha/common/interceptor/LoginInterceptor.java	(date 1613637769000)
++++ library-common/src/main/java/com/chacha/common/interceptor/LoginInterceptor.java	(date 1613637769000)
+@@ -0,0 +1,50 @@
++package com.chacha.common.interceptor;
++
++import android.content.Context;
++
++import com.alibaba.android.arouter.facade.Postcard;
++import com.alibaba.android.arouter.facade.callback.InterceptorCallback;
++import com.alibaba.android.arouter.facade.template.IInterceptor;
++import com.alibaba.android.arouter.launcher.ARouter;
++import com.chacha.common.router.RouterActivityPath;
++import com.chacha.common.services.ILoginService;
++import com.orhanobut.logger.Logger;
++
++/**
++ * @author chacha
++ * @project AwesomeAndroidApp
++ * @package_name com.chacha.common.interceptor
++ * @date 2/18/21
++ * @time 4:29 PM
++ *
++ * <p>
++ *     登录拦截器
++ * </p>
++ *
++ */
++public class LoginInterceptor implements IInterceptor {
++    private Context context;
++
++    @Override
++    public void process(Postcard postcard, InterceptorCallback callback) {
++        if (postcard.getPath().equals(RouterActivityPath.User.PAGER_ATTENTION)) { // 如果当前页面路径为PAGER_ATTENTION
++            ILoginService iLoginService = ARouter.getInstance().navigation(ILoginService.class);
++
++            if (iLoginService.isLogin()) {
++                // 如果App已经登录，处理完成交还控制权
++                callback.onContinue(postcard);
++            } else { // 否则跳转到登录界面
++                ARouter.getInstance().build(RouterActivityPath.User.PAGER_LOGIN).greenChannel().navigation(context);
++                callback.onInterrupt(null);
++            }
++        } else {
++            callback.onContinue(postcard);
++        }
++    }
++
++    @Override
++    public void init(Context context) {
++        this.context = context;
++        Logger.d("登录拦截器被初始化了");
++    }
++}
+Index: library-video/src/androidTest/java/com/chacha/video/ExampleInstrumentedTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- library-video/src/androidTest/java/com/chacha/video/ExampleInstrumentedTest.java	(date 1615461452000)
++++ library-video/src/androidTest/java/com/chacha/video/ExampleInstrumentedTest.java	(date 1615461452000)
+@@ -0,0 +1,26 @@
++package com.chacha.video;
++
++import android.content.Context;
++
++import androidx.test.platform.app.InstrumentationRegistry;
++import androidx.test.ext.junit.runners.AndroidJUnit4;
++
++import org.junit.Test;
++import org.junit.runner.RunWith;
++
++import static org.junit.Assert.*;
++
++/**
++ * Instrumented test, which will execute on an Android device.
++ *
++ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
++ */
++@RunWith(AndroidJUnit4.class)
++public class ExampleInstrumentedTest {
++    @Test
++    public void useAppContext() {
++        // Context of the app under test.
++        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
++        assertEquals("com.chacha.video.test", appContext.getPackageName());
++    }
++}
+\ No newline at end of file
