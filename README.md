@@ -5,7 +5,7 @@
 
 - 项目结构图
 
-![architecture](assets/images/Screen Shot 2020-12-14 at 11.26.30 AM.png)
+![architecture](assets/images/project-structure.png)
 
 - App 架构图
 
@@ -17,7 +17,7 @@
 
 ![Android MVVM架构](assets/images/final-architecture.png)
 
-[Android Jetpack 应用架构设计指南](hhttps://developer.android.com/jetpack/guide)
+[Android Jetpack 应用架构设计指南](https://developer.android.com/jetpack/guide)
 
 - Android X
 [官方介绍](https://developer.android.google.cn/jetpack/androidx) ；
@@ -28,7 +28,7 @@
 
 Jetpack概览
 
-![Jetpack Overview](assets/images/Android Jetpack.png)
+![Android Jetpack Overview](assets/images/android-jetpack.png)
 
 ## App 第三方的依赖
 
@@ -42,7 +42,7 @@ loadsir是一个app 页面状态管理的第三方库，也非常得实用，用
 点击重试等，从此告别自己控制网络加载失败等页面 show 、 hint 操作 和ViewStub等的控制，
 可以基于自己的业务进行基类封装，具体请看项目base库中activity 和fragment 基类的封装。
 
-- [MMKV](https://github.com/Tencent/MMKV) 
+- [MMKV](https://github.com/Tencent/MMKV)
 
 MMKV 是腾讯开源的一个轻量级的存储库，是基于 mmap 内存映射的 key-value 组件，底层序列化/反序列化使用 protobuf 实现 具体使用请看官方介绍
 
@@ -96,3 +96,4 @@ ViewPager轮播图，简单、高效，一行代码实现循环轮播，一屏�
 [Android Handler机制](https://segmentfault.com/a/1190000022843928)
 [Android Jetpack框架之LiveData与ViewModel](https://www.jianshu.com/p/349642a79e89)
 [Android单元测试研究与实践](https://tech.meituan.com/2015/12/24/android-unit-test.html)
+[Android组件化方案及组件消息总线modular-event实战](https://tech.meituan.com/2018/12/20/modular-event.html)
