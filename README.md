@@ -19,7 +19,7 @@
 
 [Android Jetpack 应用架构设计指南](hhttps://developer.android.com/jetpack/guide)
 
-- Android X 
+- Android X
 [官方介绍](https://developer.android.google.cn/jetpack/androidx) ；
 
 - Jetpack
